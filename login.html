@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión | ConectaMed RD</title>
+  <meta name="description" content="Accede a tu cuenta de ConectaMed RD.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="login">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div data-include="components/navbar.html"></div>
+
+  <main id="contenido">
+
+    <section class="container login-grid">
+      <aside class="login-aside">
+        <div class="login-aside-inner">
+          <div class="hero-logo hero-logo--sm"><img src="assets/img/logo-conectamed.svg" alt=""><span>ConectaMed <b>RD</b></span></div>
+          <h2>Conectando talento, impulsando la industria nacional</h2>
+          <ul class="check-list check-list--light">
+            <li>Aplica a pasantías y vacantes</li>
+            <li>Registra las necesidades de tu industria</li>
+            <li>Formaliza tu MIPYME y conviértete en proveedor</li>
+          </ul>
+        </div>
+      </aside>
+      <div class="card login-card">
+        <h1>Iniciar sesión</h1>
+        <p>Accede a tu espacio en la plataforma.</p>
+        <form id="login-form" novalidate>
+          <fieldset class="roles"><legend class="sr-only">Tipo de cuenta</legend>
+            <label class="role"><input type="radio" name="rol" value="persona" checked><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg>Persona</span></label>
+            <label class="role"><input type="radio" name="rol" value="industria"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21V9l7 4V9l7 4V3h6v18z"/></svg>Industria</span></label>
+            <label class="role"><input type="radio" name="rol" value="mipyme"><span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9l2-6h14l2 6zM4 11h16v10H4zM10 15h4v6h-4z"/></svg>MIPYME</span></label>
+          </fieldset>
+          <div class="field"><label for="correo">Correo electrónico</label>
+            <div class="input-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm9 7.2L4.5 7H4v.6l8 5.6 8-5.6V7h-.5z"/></svg><input id="correo" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" required></div></div>
+          <div class="field"><label for="clave">Contraseña</label>
+            <div class="input-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10V7a5 5 0 0110 0v3h1a1 1 0 011 1v9a1 1 0 01-1 1H6a1 1 0 01-1-1v-9a1 1 0 011-1zm2 0h6V7a3 3 0 00-6 0z"/></svg><input id="clave" type="password" autocomplete="current-password" placeholder="Tu contraseña" required>
+            <button class="pw-toggle" type="button" data-toggle-pw aria-label="Mostrar contraseña">Mostrar</button></div></div>
+          <div class="login-row"><label class="check"><input type="checkbox"> Mantener sesión iniciada</label><button class="link-btn" type="button" id="forgot">¿Olvidaste tu contraseña?</button></div>
+          <button class="btn btn--block btn--arrow" type="submit">Entrar</button>
+          <p class="form-msg" id="login-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

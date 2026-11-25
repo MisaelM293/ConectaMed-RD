@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Industrias | ConectaMed RD</title>
+  <meta name="description" content="Registra las necesidades de talento humano y de insumos de tu industria y conecta con el talento y los proveedores dominicanos.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="industrias">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div data-include="components/navbar.html"></div>
+
+  <main id="contenido">
+    <section class="page-hero page-hero--industrias">
+      <div class="container"><h1>Industrias</h1><p>Comparte tus necesidades y conecta con el talento dominicano</p></div>
+    </section>
+    <nav class="container breadcrumb" aria-label="Ruta"><a class="crumb-home" href="index.html" aria-label="Inicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3z"/></svg></a><span>Industrias</span></nav>
+
+    <section class="container section" style="padding-top:0">
+      <div class="split-eq">
+        <div class="card card--navy need-cta">
+          <div>
+            <h2>Registrar necesidades</h2>
+            <p>Indícanos qué perfiles profesionales requieres y qué insumos necesitas para tu producción.</p>
+            <button class="btn btn--white btn--arrow" type="button" id="open-needs">Publicar necesidad</button>
+          </div>
+          <span class="need-art"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21V9l7 4V9l7 4V3h6v18z"/></svg></span>
+        </div>
+        <div class="card register">
+          <div class="register-body">
+            <h2>¿Qué puedes registrar?</h2>
+            <div class="register-cols">
+              <div><span class="mini-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7zm8 0a3 3 0 100-6 3 3 0 000 6zM8 13c-3 0-6 1.5-6 4v3h12v-3c0-2.5-3-4-6-4zm8 0c-.6 0-1.2.1-1.8.2 1.2 1 1.8 2.3 1.8 3.8v3h6v-3c0-2.2-2.7-4-6-4z"/></svg></span><h3>Talento Humano</h3><ul class="check-list"><li>Perfiles requeridos</li><li>Cantidad de personal</li><li>Competencias clave</li></ul></div>
+              <div><span class="mini-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l9 4.5v11L12 22l-9-4.5v-11zM12 4.3L6 7.3l6 3 6-3zM5 9v7.3l6 3V12zm14 0l-6 3v7.3l6-3z"/></svg></span><h3>Cadena de Suministro</h3><ul class="check-list"><li>Insumos y materiales</li><li>Productos</li><li>Servicios</li></ul></div>
+            </div>
+          </div>
+          <figure class="register-photo"><img src="assets/img/hero-industrias.jpg" alt="Planta de producción" loading="lazy"></figure>
+        </div>
+      </div>
+
+      <h2 style="margin-top:2.2rem">Tus necesidades registradas</h2>
+      <div class="card table-wrap">
+        <table>
+          <thead><tr><th>Fecha</th><th>Tipo</th><th>Descripción</th><th>Estado</th><th></th></tr></thead>
+          <tbody id="needs-body"></tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:1rem">Las necesidades se guardan en este navegador mientras se conecta la base de datos de la plataforma.</p>
+    </section>
+
+    <dialog class="dialog" id="needs-dialog" aria-labelledby="dlg-title">
+      <form id="needs-form" method="dialog">
+        <h2 id="dlg-title">Publicar necesidad</h2>
+        <p>Cuéntanos qué necesita tu industria.</p>
+        <div class="field"><label for="tipo">Tipo de necesidad</label>
+          <select id="tipo" name="tipo"><option>Talento Humano</option><option>Cadena de Suministro</option></select></div>
+        <div class="field"><label for="desc">Descripción</label>
+          <input id="desc" name="desc" placeholder="Ej.: 10 técnicos en producción, o cartón para empacar"></div>
+        <div class="field"><label for="req">Requisitos o capacitación</label>
+          <input id="req" name="req" placeholder="Ej.: debe hablar inglés, o bolsitas de 10 x 15 cm"></div>
+        <p class="form-msg" id="needs-msg" role="status"></p>
+        <div class="dialog-actions"><button class="btn btn--outline" type="button" id="cancel-needs">Cancelar</button><button class="btn btn--arrow" type="submit">Publicar necesidad</button></div>
+      </form>
+    </dialog>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formación y Empleo | ConectaMed RD</title>
+  <meta name="description" content="Pasantías, vacantes, perfiles requeridos y cursos de INFOTEP para el sector de dispositivos médicos y farmacéuticos.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="formacion">
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div data-include="components/navbar.html"></div>
+
+  <main id="contenido">
+    <section class="page-hero page-hero--formacion">
+      <div class="container"><h1>Formación y Empleo</h1><p>Desarrolla tus habilidades y encuentra nuevas oportunidades</p></div>
+    </section>
+    <nav class="container breadcrumb" aria-label="Ruta"><a class="crumb-home" href="index.html" aria-label="Inicio"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3z"/></svg></a><span>Formación y Empleo</span></nav>
+
+    <section class="container section" style="padding-top:0" data-tabs>
+      <div class="tabs tabs--cards" role="tablist">
+        <button class="tab" role="tab" data-tab="pasantias" aria-selected="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 3h6a1 1 0 011 1v2h4a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h4V4a1 1 0 011-1zm1 2v1h4V5zM3 12h18v-2H3z"/></svg><span>Pasantías y Empleo</span></button>
+        <button class="tab" role="tab" data-tab="cursos" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z"/></svg><span>Cursos INFOTEP</span></button>
+        <button class="tab" role="tab" data-tab="perfil" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg><span>Tu Perfil Profesional</span></button>
+      </div>
+
+      <div class="tab-panel is-active" data-panel="pasantias">
+        <div class="feature">
+          <figure class="media"><img src="assets/img/hero-formacion.jpg" alt="Estudiantes atentos en una clase" loading="lazy"></figure>
+          <div class="feature-main">
+            <h2>Pasantías y Vacantes</h2>
+            <p>Conecta con empresas del sector y aplica a las ofertas que se ajusten a tu perfil.</p>
+            <ul class="check-list"><li>Consulta vacantes y pasantías</li><li>Conoce los requisitos de cada puesto</li><li>Aplica desde la plataforma y da seguimiento</li></ul>
+            <a class="btn btn--arrow" href="#vacantes">Buscar oportunidades</a>
+          </div>
+          <div class="side-stack">
+            <div class="card side-card">
+              <div class="side-head"><h3>Cursos de INFOTEP</h3><span class="infotep">INFOTEP</span></div>
+              <p>Accede a la oferta formativa de INFOTEP para fortalecer tu talento.</p>
+              <button class="btn btn--sm btn--arrow" type="button" data-goto-tab="cursos">Ver cursos</button>
+            </div>
+            <div class="card side-card card--soft">
+              <div class="side-head"><h3>Mi Perfil</h3><span class="avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg></span></div>
+              <p>Mantén tu información actualizada para más oportunidades.</p>
+              <button class="btn btn--sm btn--arrow" type="button" data-goto-tab="perfil">Actualizar perfil</button>
+            </div>
+          </div>
+        </div>
+        <div class="card" id="vacantes" style="margin-top:1.5rem">
+          <h2>Oportunidades disponibles</h2>
+          <div class="search"><label class="sr-only" for="buscar">Buscar oportunidades</label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="buscar" type="search" placeholder="Buscar por puesto o empresa" data-filter="#lista-vacantes"></div>
+          <div id="lista-vacantes">
+          <div class="offer" data-item>
+            <div><h3>Técnico de producción</h3><p>Bachiller técnico o estudiante de último año. Disponibilidad de horario rotativo.</p><div class="meta"><span class="badge">Pasantía</span><span class="badge badge--ok">Industria farmacéutica</span></div></div>
+            <a class="btn btn--sm btn--arrow" href="login.html">Aplicar</a>
+          </div>
+          <div class="offer" data-item>
+            <div><h3>Auxiliar de control de calidad</h3><p>Formación técnica en áreas afines. Buenas prácticas de manufactura deseable.</p><div class="meta"><span class="badge">Vacante</span><span class="badge badge--ok">Dispositivos médicos</span></div></div>
+            <a class="btn btn--sm btn--arrow" href="login.html">Aplicar</a>
+          </div>
+          <div class="offer" data-item>
+            <div><h3>Operador de empaque</h3><p>Bachiller. Inglés básico es una ventaja.</p><div class="meta"><span class="badge">Vacante</span><span class="badge badge--ok">Manufactura médica</span></div></div>
+            <a class="btn btn--sm btn--arrow" href="login.html">Aplicar</a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="cursos">
+        <div class="card">
+          <div class="side-head"><h2>Cursos INFOTEP</h2><span class="infotep">INFOTEP</span></div>
+          <p>Accede a la oferta formativa de INFOTEP para fortalecer tu talento.</p>
+          <div class="offer">
+            <div><h3>Buenas prácticas de manufactura</h3><p>Fundamentos para trabajar en plantas de dispositivos médicos y farmacéuticos.</p><div class="meta"><span class="badge">INFOTEP</span></div></div>
+            <a class="btn btn--sm btn--outline btn--arrow" href="https://www.infotep.gob.do" target="_blank" rel="noopener">Ver curso</a>
+          </div>
+          <div class="offer">
+            <div><h3>Control de calidad</h3><p>Inspección, registros y trazabilidad en producción.</p><div class="meta"><span class="badge">INFOTEP</span></div></div>
+            <a class="btn btn--sm btn--outline btn--arrow" href="https://www.infotep.gob.do" target="_blank" rel="noopener">Ver curso</a>
+          </div>
+          <div class="offer">
+            <div><h3>Inglés técnico</h3><p>Vocabulario y comunicación para entornos industriales.</p><div class="meta"><span class="badge">INFOTEP</span></div></div>
+            <a class="btn btn--sm btn--outline btn--arrow" href="https://www.infotep.gob.do" target="_blank" rel="noopener">Ver curso</a>
+          </div>
+          <p class="note">Los cursos de ejemplo se reemplazan por la oferta real que publique INFOTEP.</p>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="perfil">
+        <div class="card" style="max-width:680px">
+          <div class="side-head"><h2>Mi perfil</h2><span class="avatar avatar--lg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg></span></div>
+          <p>Mantén tu información actualizada para recibir más oportunidades.</p>
+          <form id="profile-form">
+            <div class="grid grid-2">
+              <div class="field"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" autocomplete="name"></div>
+              <div class="field"><label for="area">Área de interés</label><select id="area" name="area"><option>Producción</option><option>Control de calidad</option><option>Logística</option><option>Mantenimiento</option></select></div>
+            </div>
+            <div class="field"><label for="cursos">Cursos y capacitaciones</label><input id="cursos" name="cursos" placeholder="Ej.: Buenas prácticas de manufactura"></div>
+            <div class="field"><label for="idiomas">Idiomas</label><input id="idiomas" name="idiomas" placeholder="Ej.: Español, inglés intermedio"></div>
+            <button class="btn btn--arrow" type="submit">Actualizar perfil</button>
+            <p class="form-msg" id="profile-msg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
