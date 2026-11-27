@@ -18,9 +18,11 @@
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
         .then(function (html) { el.innerHTML = html; })
         .catch(function () {
-          el.innerHTML = '<p class="note" style="margin:1rem">Abre el proyecto con un servidor local (por ejemplo la extensión Live Server de VS Code) o súbelo a GitHub Pages para ver el menú y el pie de página.</p>';
+          var src = el.getAttribute("data-include"), local = /^(localhost|127\.0\.0\.1|)$/.test(location.hostname);
+          if (window.console) console.warn("ConectaMed RD: no se pudo cargar " + src);
+          el.innerHTML = local ? '<p class="note" style="margin:1rem">No se pudo cargar <b>' + esc(src) + '</b>. Verifica que el archivo exista en esa ruta y que el proyecto se abra con un servidor local (Live Server) o desde GitHub Pages.</p>' : "";
         });
-    });
+          });
     return Promise.all(jobs);
   }
 
@@ -147,11 +149,41 @@
     addEventListener("pageshow", function (e) { if (e.persisted) document.body.classList.remove("is-leaving"); });
   }
 
+  /* 8. Carrusel de logos: duplica la lista para el bucle continuo, con botones Reproducir / Pausar */
+  function initCarousel() {
+    $$("[data-carousel]").forEach(function (box) {
+      var track = $(".carousel-track", box);
+      if (!track || track.getAttribute("data-ready")) return;
+      $$("li", track).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute("aria-hidden", "true"); $$("img", c).forEach(function (i) { i.alt = ""; }); track.appendChild(c); });
+      track.setAttribute("data-ready", "1");
+      var root = box.closest(".allies-strip") || box.parentNode, play = $("[data-carousel-play]", root), pause = $("[data-carousel-pause]", root);
+      function set(paused) {
+        box.classList.toggle("is-paused", paused);
+        if (play) play.setAttribute("aria-pressed", !paused); if (pause) pause.setAttribute("aria-pressed", paused);
+      }
+      if (play) play.addEventListener("click", function () { set(false); });
+      if (pause) pause.addEventListener("click", function () { set(true); });
+      set(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+    });
+  }
+
+  /* 9. Logos de instituciones: archivo local -> respaldo remoto -> nombre en texto */
+  function initLogos() {
+    document.addEventListener("error", function (e) {
+      var img = e.target;
+      if (!img || img.tagName !== "IMG" || !img.classList.contains("inst-logo")) return;
+      var fb = img.getAttribute("data-fallback");
+      if (fb && !img.getAttribute("data-tried")) { img.setAttribute("data-tried", "1"); img.src = fb; return; }
+      var span = document.createElement("span"); span.className = "inst-fallback"; span.textContent = img.getAttribute("data-name") || img.alt;
+      img.replaceWith(span);
+    }, true);
+  }
+
   var started = false;
   function start() {
     if (started) return; started = true;
-    initTabs(); initFilter(); initNeeds(); initProfile(); initLogin(); initTransitions();
+    initLogos(); initTabs(); initFilter(); initNeeds(); initProfile(); initLogin(); initTransitions();
   }
-  loadComponents().then(initChrome);
+  loadComponents().then(function () { initChrome(); initCarousel(); });
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
