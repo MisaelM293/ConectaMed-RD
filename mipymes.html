@@ -66,6 +66,28 @@
     </section>
   </main>
 
+  <!-- ENTIDADES ALIADAS · carrusel. Para agregar o quitar un logo, edita los <li>; el JS duplica la lista para el movimiento continuo -->
+  <section class="allies-strip" aria-labelledby="aliados-titulo">
+    <div class="container">
+      <h2 class="allies-title" id="aliados-titulo">Entidades aliadas</h2>
+      <p class="allies-sub">Instituciones vinculadas con el proyecto</p>
+    </div>
+    <div class="carousel" data-carousel role="group" aria-roledescription="carrusel" aria-label="Logos de entidades aliadas">
+      <ul class="carousel-track">
+        <li><img src="assets/img/aliados/micm.png" alt="MICM, Ministerio de Industria, Comercio y MIPYMES" loading="lazy"></li>
+        <li><img src="assets/img/aliados/adozona.png" alt="ADOZONA, Asociación Dominicana de Zonas Francas" loading="lazy"></li>
+        <li><img src="assets/img/aliados/infotep.png" alt="INFOTEP" loading="lazy"></li>
+        <li><img src="assets/img/aliados/cnzfe.png" alt="CNZFE, Consejo Nacional de Zonas Francas de Exportación" loading="lazy"></li>
+        <li><img src="assets/img/aliados/minerd.png" alt="MINERD, Ministerio de Educación" loading="lazy"></li>
+        <li><img src="assets/img/aliados/mescyt.png" alt="MESCYT, Ministerio de Educación Superior, Ciencia y Tecnología" loading="lazy"></li>
+        <li><img src="assets/img/aliados/cluster-dispositivos-medicos.png" alt="Clúster de Dispositivos Médicos de la República Dominicana" loading="lazy"></li>
+      </ul>
+    </div>
+    <div class="container carousel-controls">
+      <button type="button" class="ctl" data-carousel-play aria-pressed="false">Reproducir</button>
+      <button type="button" class="ctl" data-carousel-pause aria-pressed="false">Pausar</button>
+    </div>
+  </section>
   <div data-include="components/footer.html"></div>
   <script src="assets/js/main.js" defer></script>
 </body>

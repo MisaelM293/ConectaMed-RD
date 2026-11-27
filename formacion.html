@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formación y Empleo | ConectaMed RD</title>
-  <meta name="description" content="Pasantías, vacantes, perfiles requeridos y cursos de INFOTEP para el sector de dispositivos médicos y farmacéuticos.">
+  <meta name="description" content="Pasantías, vacantes, cursos de INFOTEP y carreras de INTEC, PUCMM e ITLA orientadas al sector de dispositivos médicos.">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -22,6 +22,7 @@
       <div class="tabs tabs--cards" role="tablist">
         <button class="tab" role="tab" data-tab="pasantias" aria-selected="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 3h6a1 1 0 011 1v2h4a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h4V4a1 1 0 011-1zm1 2v1h4V5zM3 12h18v-2H3z"/></svg><span>Pasantías y Empleo</span></button>
         <button class="tab" role="tab" data-tab="cursos" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z"/></svg><span>Cursos INFOTEP</span></button>
+        <button class="tab" role="tab" data-tab="carreras" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L1 8l11 6 9-5v7h2V8zM5 12.5V16c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.5l-7 3.8z"/></svg><span>Carreras y universidades</span></button>
         <button class="tab" role="tab" data-tab="perfil" aria-selected="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg><span>Tu Perfil Profesional</span></button>
       </div>
 
@@ -36,9 +37,14 @@
           </div>
           <div class="side-stack">
             <div class="card side-card">
-              <div class="side-head"><h3>Cursos de INFOTEP</h3><span class="infotep">INFOTEP</span></div>
-              <p>Accede a la oferta formativa de INFOTEP para fortalecer tu talento.</p>
+              <div class="side-head"><h3>Cursos de INFOTEP</h3><img class="side-logo" src="assets/img/aliados/infotep.png" alt="INFOTEP"></div>
+              <p>Carreras técnicas y cursos alineados con el sector industrial.</p>
               <button class="btn btn--sm btn--arrow" type="button" data-goto-tab="cursos">Ver cursos</button>
+            </div>
+            <div class="card side-card">
+              <div class="side-head"><h3>Carreras y universidades</h3><span class="avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L1 8l11 6 9-5v7h2V8zM5 12.5V16c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.5l-7 3.8z"/></svg></span></div>
+              <p>INTEC, PUCMM e ITLA ofrecen programas en manufactura de dispositivos médicos.</p>
+              <button class="btn btn--sm btn--arrow" type="button" data-goto-tab="carreras">Ver carreras</button>
             </div>
             <div class="card side-card card--soft">
               <div class="side-head"><h3>Mi Perfil</h3><span class="avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/></svg></span></div>
@@ -69,22 +75,122 @@
 
       <div class="tab-panel" data-panel="cursos">
         <div class="card">
-          <div class="side-head"><h2>Cursos INFOTEP</h2><span class="infotep">INFOTEP</span></div>
-          <p>Accede a la oferta formativa de INFOTEP para fortalecer tu talento.</p>
-          <div class="offer">
-            <div><h3>Buenas prácticas de manufactura</h3><p>Fundamentos para trabajar en plantas de dispositivos médicos y farmacéuticos.</p><div class="meta"><span class="badge">INFOTEP</span></div></div>
-            <a class="btn btn--sm btn--outline btn--arrow" href="https://www.infotep.gob.do" target="_blank" rel="noopener">Ver curso</a>
+          <div class="side-head"><div><h2>Cursos y carreras técnicas de INFOTEP</h2><p style="margin:0">Programas relacionados con manufactura, automatización, electrónica y mantenimiento industrial.</p></div><img class="side-logo side-logo--lg" src="assets/img/aliados/infotep.png" alt="INFOTEP"></div>
+          <div class="course-grid">
+            <article class="course">
+              <h3>Técnico en mecatrónica y automatización industrial</h3>
+              <div class="meta"><span class="badge">685 horas</span><span class="badge badge--ok">Carrera técnica</span></div>
+              <p>Área: Automatización</p>
+            </article>
+            <article class="course">
+              <h3>Técnico en mecánica industrial</h3>
+              <div class="meta"><span class="badge">910 horas</span><span class="badge badge--ok">Carrera técnica</span></div>
+              <p>Área: Mecánica industrial</p>
+            </article>
+            <article class="course">
+              <h3>Electrónica de mantenimiento industrial</h3>
+              <div class="meta"><span class="badge">338 horas</span><span class="badge badge--ok">Curso técnico</span></div>
+              <p>Área: Electrónica</p>
+            </article>
+            <article class="course">
+              <h3>Instalación de sistemas electrónicos de control</h3>
+              <div class="meta"><span class="badge">260 horas</span><span class="badge badge--ok">Curso técnico</span></div>
+              <p>Área: Automatización</p>
+            </article>
+            <article class="course">
+              <h3>Mecanización industrial con herramientas básicas y manuales</h3>
+              <div class="meta"><span class="badge">300 horas</span><span class="badge badge--ok">Curso técnico</span></div>
+              <p>Área: Metalmecánica</p>
+            </article>
+            <article class="course">
+              <h3>Mecánica de mantenimiento básico industrial</h3>
+              <div class="meta"><span class="badge">170 horas</span><span class="badge badge--ok">Curso técnico</span></div>
+              <p>Área: Mantenimiento</p>
+            </article>
+            <article class="course">
+              <h3>Montaje de circuitos electrónicos básicos</h3>
+              <div class="meta"><span class="badge">290 horas</span><span class="badge badge--ok">Curso técnico</span></div>
+              <p>Área: Electrónica</p>
+            </article>
+            <article class="course">
+              <h3>Operación y programación de máquinas de control numérico</h3>
+              <div class="meta"><span class="badge">CNC</span><span class="badge badge--ok">Metalmecánica y manufactura</span></div>
+              <p>Área: Manufactura</p>
+            </article>
+            <article class="course">
+              <h3>Técnico en mecanización industrial con torno y fresadora</h3>
+              <div class="meta"><span class="badge">Torno y fresadora</span><span class="badge badge--ok">Metalmecánica y manufactura</span></div>
+              <p>Área: Manufactura</p>
+            </article>
+            <article class="course">
+              <h3>Técnico en automatización y robótica industrial</h3>
+              <div class="meta"><span class="badge">Robótica</span><span class="badge badge--ok">Electrónica y robótica</span></div>
+              <p>Área: Automatización</p>
+            </article>
           </div>
-          <div class="offer">
-            <div><h3>Control de calidad</h3><p>Inspección, registros y trazabilidad en producción.</p><div class="meta"><span class="badge">INFOTEP</span></div></div>
-            <a class="btn btn--sm btn--outline btn--arrow" href="https://www.infotep.gob.do" target="_blank" rel="noopener">Ver curso</a>
+          <h3 style="margin-top:1.8rem">Programas con el sector de zonas francas</h3>
+          <div class="grid grid-2">
+            <article class="card card--soft prog"><h3>Programa INFOTEP–Zonas Francas</h3><p>Capacitación para trabajadores de empresas de zonas francas, desarrollada en alianza con ADOZONA.</p></article>
+            <article class="card card--soft prog"><h3>Programa Lean 100</h3><p>Formación en Lean Manufacturing para trabajadores de zonas francas, con 160 horas prácticas de implementación en la empresa.</p></article>
           </div>
-          <div class="offer">
-            <div><h3>Inglés técnico</h3><p>Vocabulario y comunicación para entornos industriales.</p><div class="meta"><span class="badge">INFOTEP</span></div></div>
-            <a class="btn btn--sm btn--outline btn--arrow" href="https://www.infotep.gob.do" target="_blank" rel="noopener">Ver curso</a>
-          </div>
-          <p class="note">Los cursos de ejemplo se reemplazan por la oferta real que publique INFOTEP.</p>
+          <div class="inst-actions" style="margin-top:1.4rem"><a class="btn btn--arrow" href="https://infotep.gob.do/ofertas-2026/of-direccion-regional-metropolitana/" target="_blank" rel="noopener">Ver oferta formativa en INFOTEP</a></div>
+          <p class="note" style="margin-top:1rem">La oferta, los horarios y los centros varían por regional y por período. Confirma disponibilidad en INFOTEP antes de inscribirte.</p>
         </div>
+      </div>
+
+      <div class="tab-panel" data-panel="carreras">
+        <div class="section-title"><h2>Carreras y programas del sector</h2><p>Programas de educación superior orientados a la manufactura de dispositivos médicos en la República Dominicana.</p></div>
+        <div class="grid grid-3 inst-grid">
+            <article class="card inst">
+              <header class="inst-head">
+                <div class="inst-plate"><img class="inst-logo" src="assets/img/instituciones/intec.png" data-fallback="https://www.intec.edu.do/images/logos/logo-intec-nuevo.png" data-name="INTEC" alt="Logo de INTEC" loading="lazy"></div>
+                <div><h3>INTEC</h3><p>Instituto Tecnológico de Santo Domingo</p></div>
+              </header>
+              <h4 class="inst-program">Manufactura de dispositivos médicos</h4>
+              <div class="meta"><span class="badge">Grado · Ingeniería</span><span class="badge badge--ok">Requiere 160 créditos aprobados</span></div>
+              <p>Forma profesionales que elevan la competitividad de las empresas nacionales y multinacionales del sector, con base en regulación, calidad y mejora continua.</p>
+              <h5>Asignaturas del programa</h5>
+              <ul class="check-list"><li>IIN303 · Estándares y Regulaciones para la Industria de Dispositivos Médicos y Farmacéuticos</li><li>IIN311 · Validación en la Manufactura de Dispositivos Médicos</li><li>INI380 · Pensamiento Esbelto</li></ul>
+              <p class="inst-note">Aplica a estudiantes de Ingeniería Industrial, Ingeniería Biomédica, Ingeniería Mecatrónica y Diseño Industrial.</p>
+              <div class="inst-actions"><a class="btn btn--sm btn--arrow" href="https://www.intec.edu.do/component/zoo/item/manufactura-de-dispositivos-medicos?Itemid=101" target="_blank" rel="noopener">Ver programa</a><a class="btn btn--sm btn--outline" href="https://admisiones.intec.edu.do/" target="_blank" rel="noopener">Admisiones</a><a class="btn btn--sm btn--outline" href="https://ep.intec.edu.do/" target="_blank" rel="noopener">Educación Permanente</a></div>
+            </article>
+            <article class="card inst">
+              <header class="inst-head">
+                <div class="inst-plate"><img class="inst-logo" src="assets/img/instituciones/pucmm.png" data-fallback="https://stem.pucmm.edu.do/wp-content/uploads/2025/02/Marca-PUCMM-Color-230x76.png" data-name="PUCMM" alt="Logo de PUCMM" loading="lazy"></div>
+                <div><h3>PUCMM</h3><p>Pontificia Universidad Católica Madre y Maestra</p></div>
+              </header>
+              <h4 class="inst-program">Técnico Superior en Manufactura de Dispositivos Médicos</h4>
+              <div class="meta"><span class="badge">Técnico Superior</span><span class="badge badge--ok">Carreras STEM</span></div>
+              <p>Formación técnica en procesos de manufactura, metrología, normas y regulaciones propias de la industria de dispositivos médicos.</p>
+              <h5>Asignaturas del programa</h5>
+              <ul class="check-list"><li>Fundamentos de Dispositivos Médicos</li><li>Procesos de Manufactura de Dispositivos Médicos I</li><li>Metrología Aplicada a los Dispositivos Médicos</li><li>Normas y Regulaciones para la Manufactura de Dispositivos Médicos</li><li>Proceso de Moldeo por Inyección</li></ul>
+              <p class="inst-note">Confirma en la PUCMM el campus y el calendario en que se ofrece (Santiago, Santo Domingo o Puerto Plata).</p>
+              <div class="inst-actions"><a class="btn btn--sm btn--arrow" href="https://stem.pucmm.edu.do/carreras/tecnico-superior-en-manufactura-de-dispositivos-medicos/" target="_blank" rel="noopener">Ver programa</a><a class="btn btn--sm btn--outline" href="https://tep.pucmm.edu.do/Documents/Programas_Tecnico_Superior/Pensum-Dispositivos-Medicos.pdf" target="_blank" rel="noopener">Plan de estudios (PDF)</a><a class="btn btn--sm btn--outline" href="https://pucmm.edu.do/admisiones" target="_blank" rel="noopener">Admisiones</a></div>
+            </article>
+            <article class="card inst">
+              <header class="inst-head">
+                <div class="inst-plate inst-plate--dark"><img class="inst-logo" src="assets/img/instituciones/itla.png" data-fallback="https://itla.edu.do/wp-content/uploads/2026/04/Logo-Itla-bLanco.png" data-name="ITLA" alt="Logo de ITLA" loading="lazy"></div>
+                <div><h3>ITLA</h3><p>Instituto Tecnológico de Las Américas</p></div>
+              </header>
+              <h4 class="inst-program">Tecnólogo en Manufactura de Dispositivos Médicos</h4>
+              <div class="meta"><span class="badge">2 años y 4 meses · 154 créditos</span><span class="badge badge--ok">Presencial · Recinto Caleta</span></div>
+              <p>Prepara para puestos industriales y de manufactura en el sector: máquinas CNC, automatización de procesos, herramientas de calidad y lean manufacturing, con posibilidad de trabajar en entornos bilingües.</p>
+              <h5>Asignaturas del programa</h5>
+              <ul class="check-list"><li>Introducción a la Manufactura de Dispositivos Médicos</li><li>Procesos de Manufactura I y II</li><li>Manufactura de Dispositivos Médicos: Procesos, Equipos y Técnicas</li><li>Dispositivos Médicos, Biomateriales y Biocompatibilidad</li><li>Prototipado de Dispositivos Médicos con Impresión 3D</li><li>Diseño de Dispositivos Médicos y Proyecto Final</li></ul>
+              <p class="inst-note">Campo ocupacional: programador CNC, supervisor de calidad, técnico de validación, técnico de automatización y especialista en manufactura.</p>
+              <div class="inst-actions"><a class="btn btn--sm btn--arrow" href="https://itla.edu.do/tecnologo-de-manufactura-de-dispositivos-medicos/" target="_blank" rel="noopener">Ver programa</a><a class="btn btn--sm btn--outline" href="https://itla.edu.do/wp-content/uploads/2025/03/Plan-de-estudios-Manufactura-dispositivos-medicos.pdf" target="_blank" rel="noopener">Plan de estudios (PDF)</a><a class="btn btn--sm btn--outline" href="https://itla.edu.do/admisiones/" target="_blank" rel="noopener">Admisiones</a></div>
+            </article>
+        </div>
+        <div class="card card--soft" style="margin-top:1.5rem">
+          <h3>Otras opciones relacionadas</h3>
+          <ul class="link-list">
+            <li><a href="https://itla.edu.do/tecnologo-en-manufactura-automatizada/" target="_blank" rel="noopener">ITLA · Tecnólogo en Manufactura Automatizada <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a></li>
+            <li><a href="https://itla.edu.do/tecnologo-en-mecatronica/" target="_blank" rel="noopener">ITLA · Tecnólogo en Mecatrónica <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a></li>
+            <li><a href="https://itla.edu.do/tecnologo-en-diseno-industrial/" target="_blank" rel="noopener">ITLA · Tecnólogo en Diseño Industrial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a></li>
+            <li><a href="https://www.intec.edu.do/en/oferta-academica/postgrado/ingenieria/item/especialidad-en-manufactura-de-dispositivos-medicos" target="_blank" rel="noopener">INTEC · Especialidad en Manufactura de Dispositivos Médicos (postgrado) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a></li>
+          </ul>
+        </div>
+        <p class="note" style="margin-top:1rem">Información tomada de los sitios oficiales de cada institución en noviembre de 2026. Confirma requisitos, costos, campus y fechas de admisión directamente con cada una.</p>
       </div>
 
       <div class="tab-panel" data-panel="perfil">
@@ -106,6 +212,28 @@
     </section>
   </main>
 
+  <!-- ENTIDADES ALIADAS · carrusel. Para agregar o quitar un logo, edita los <li>; el JS duplica la lista para el movimiento continuo -->
+  <section class="allies-strip" aria-labelledby="aliados-titulo">
+    <div class="container">
+      <h2 class="allies-title" id="aliados-titulo">Entidades aliadas</h2>
+      <p class="allies-sub">Instituciones vinculadas con el proyecto</p>
+    </div>
+    <div class="carousel" data-carousel role="group" aria-roledescription="carrusel" aria-label="Logos de entidades aliadas">
+      <ul class="carousel-track">
+        <li><img src="assets/img/aliados/micm.png" alt="MICM, Ministerio de Industria, Comercio y MIPYMES" loading="lazy"></li>
+        <li><img src="assets/img/aliados/adozona.png" alt="ADOZONA, Asociación Dominicana de Zonas Francas" loading="lazy"></li>
+        <li><img src="assets/img/aliados/infotep.png" alt="INFOTEP" loading="lazy"></li>
+        <li><img src="assets/img/aliados/cnzfe.png" alt="CNZFE, Consejo Nacional de Zonas Francas de Exportación" loading="lazy"></li>
+        <li><img src="assets/img/aliados/minerd.png" alt="MINERD, Ministerio de Educación" loading="lazy"></li>
+        <li><img src="assets/img/aliados/mescyt.png" alt="MESCYT, Ministerio de Educación Superior, Ciencia y Tecnología" loading="lazy"></li>
+        <li><img src="assets/img/aliados/cluster-dispositivos-medicos.png" alt="Clúster de Dispositivos Médicos de la República Dominicana" loading="lazy"></li>
+      </ul>
+    </div>
+    <div class="container carousel-controls">
+      <button type="button" class="ctl" data-carousel-play aria-pressed="false">Reproducir</button>
+      <button type="button" class="ctl" data-carousel-pause aria-pressed="false">Pausar</button>
+    </div>
+  </section>
   <div data-include="components/footer.html"></div>
   <script src="assets/js/main.js" defer></script>
 </body>
