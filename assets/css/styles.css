@@ -133,8 +133,11 @@ th{font-family:var(--font-title);color:var(--navy-800);background:var(--bg)}
 
 /* 7. PÁGINAS --------------------------------------------- */
 /* Hero de inicio: coloca assets/img/hero-inicio.jpg para mostrar foto */
-.hero{background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.6) 52%,rgba(255,255,255,0) 66%),url("../img/hero-inicio.jpg") right center/auto 100% no-repeat,linear-gradient(135deg,var(--blue-soft),#fff)}
-.hero-inner{padding-top:3.5rem;padding-bottom:4.5rem}
+.hero{position:relative;overflow:hidden;background:#fff}
+.hero::before{content:"";position:absolute;top:0;right:0;height:100%;aspect-ratio:16/9;background:url("../img/hero-inicio.jpg") center/cover no-repeat;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.6) 18%,#000 38%);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.6) 18%,#000 38%)}
+.hero .container{position:relative;z-index:2}
+.hero-inner{padding-top:1.4rem;padding-bottom:4.2rem}
 .hero-inner>*{max-width:620px}
 .hero-logo{display:flex;align-items:center;gap:.8rem;font:700 clamp(2rem,5vw,3rem) var(--font-title);color:var(--blue);margin-bottom:.2rem}
 .hero-logo img{width:clamp(48px,7vw,64px)} .hero-logo b{color:var(--red)}
@@ -200,7 +203,7 @@ body.is-leaving .page-progress{animation:progress 1.4s ease-out forwards}
 .skyline{margin-left:auto;width:min(420px,40%);height:auto;color:rgba(255,255,255,.35);flex:none}
 
 /* Pestañas en tarjetas */
-.tabs--cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+.tabs--cards{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
 .tabs--cards .tab{display:flex;align-items:center;gap:.7rem;padding:.95rem 1.2rem;border-radius:12px;box-shadow:var(--shadow);font-size:1rem}
 .tabs--cards .tab svg{width:26px;height:26px;flex:none}
 .tabs--cards .tab[aria-selected="true"]{box-shadow:0 10px 26px rgba(22,58,122,.35)}
@@ -272,6 +275,53 @@ body.is-leaving .page-progress{animation:progress 1.4s ease-out forwards}
 .check{display:flex;align-items:center;gap:.5rem;font-weight:400;margin:0} .check input{width:auto}
 .login-row .link-btn::after{content:""}
 
+/* 11. ENTIDADES ALIADAS · carrusel (solo en el inicio) ----- */
+.allies-strip{background:#fff;border-top:1px solid var(--line);margin-top:2.5rem;padding:2.4rem 0 1.4rem;transition:opacity .28s ease,transform .28s ease}
+.allies-title{font-size:1.5rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.2rem;color:var(--navy-800)}
+.allies-title::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--gold);margin-top:.5rem}
+.allies-sub{color:var(--muted);margin:.8rem 0 0}
+.carousel{overflow:hidden;margin-top:1.4rem;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.carousel-track{list-style:none;margin:0;padding:0;display:flex;width:max-content;animation:marquee 34s linear infinite}
+.carousel:hover .carousel-track,.carousel:focus-within .carousel-track{animation-play-state:paused}
+.carousel.is-paused .carousel-track{animation-play-state:paused}
+.carousel-track li{flex:0 0 260px;height:96px;display:flex;align-items:center;justify-content:center;padding:0 2rem}
+.carousel-track img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.carousel-controls{display:flex;justify-content:flex-end;margin-top:.6rem}
+.ctl{background:#2b2f36;color:#fff;border:0;font:600 .72rem var(--font-body);letter-spacing:.06em;text-transform:uppercase;padding:.55rem .9rem;cursor:pointer}
+.ctl:first-child{border-radius:6px 0 0 6px}.ctl:last-child{border-radius:0 6px 6px 0}
+.ctl:hover{background:var(--navy-700)} .ctl[aria-pressed="true"]{background:var(--navy-700)}
+.allies-strip+[data-include*="footer"] .site-footer{margin-top:0}
+body.is-leaving .allies-strip{opacity:0;transform:translateY(-10px)}
+@media (max-width:600px){.carousel-track li{flex-basis:200px;height:76px;padding:0 1.2rem}}
+@media (prefers-reduced-motion:reduce){.carousel-track{animation:none;overflow-x:auto}}
+
+/* 12. FORMACIÓN: INFOTEP y universidades ------------------ */
+.side-logo{height:26px;width:auto;flex:none} .side-logo--lg{height:44px}
+.course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.4rem}
+.course{border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;background:var(--white);transition:.2s}
+.course:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.course h3{font-size:1.02rem;margin-bottom:.5rem} .course p{margin:.6rem 0 0;font-size:.85rem;color:var(--muted)}
+.prog h3{font-size:1.05rem} .prog p{margin:0;font-size:.92rem;color:var(--muted)}
+.inst-grid{align-items:stretch}
+.inst{display:flex;flex-direction:column;gap:.2rem}
+.inst-head{display:flex;gap:.9rem;align-items:center;margin-bottom:.8rem}
+.inst-head h3{margin:0;font-size:1.3rem} .inst-head p{margin:0;font-size:.82rem;color:var(--muted);line-height:1.3}
+.inst-plate{flex:none;width:110px;height:64px;background:#fff;border:1px solid var(--line);border-radius:12px;display:grid;place-items:center;padding:.5rem;overflow:hidden}
+.inst-plate--dark{background:var(--navy-800);border-color:var(--navy-800)}
+.inst-logo{max-width:100%;max-height:100%;object-fit:contain}
+.inst-fallback{font:700 1.15rem var(--font-title);color:var(--navy-800);letter-spacing:.02em}
+.inst-plate--dark .inst-fallback{color:#fff}
+.inst-program{font-family:var(--font-title);font-size:1.12rem;color:var(--navy-800);margin:.2rem 0 .6rem;line-height:1.25}
+.inst>p{font-size:.92rem;color:var(--muted);margin:.7rem 0 .4rem}
+.inst h5{margin:.6rem 0 .1rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-700)}
+.inst .check-list{margin:.2rem 0 .6rem} .inst .check-list li{font-size:.88rem;line-height:1.4}
+.inst-note{background:var(--blue-soft);border-radius:8px;padding:.6rem .8rem;font-size:.84rem!important;color:var(--navy-800)!important}
+.inst-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;padding-top:.8rem}
+.link-list{list-style:none;margin:.6rem 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1.5rem}
+.link-list a{display:flex;align-items:center;gap:.4rem;padding:.35rem 0;color:var(--navy-700);font-weight:600;font-size:.92rem;text-decoration:none;border-bottom:1px solid var(--line)}
+.link-list a:hover{color:var(--blue)}
+
 /* 8. RESPONSIVE ------------------------------------------ */
 @media (max-width:900px){
   .grid-3,.grid-4,.grid-2,.split,.footer-grid{grid-template-columns:1fr}
@@ -282,7 +332,7 @@ body.is-leaving .page-progress{animation:progress 1.4s ease-out forwards}
   .main-nav a.nav-link{padding:.8rem .4rem;border-bottom:1px solid rgba(255,255,255,.1)}
   .nav-cta{margin:.8rem 0 0;text-align:center;justify-content:center}
   .brand small{display:none}
-  .hero{background:linear-gradient(180deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.88) 60%,rgba(255,255,255,.55) 100%),url("../img/hero-inicio.jpg") 80% center/cover no-repeat,var(--blue-soft)}
+  .hero::before{width:100%;aspect-ratio:auto;opacity:.22;-webkit-mask-image:none;mask-image:none}
 }
 @media (max-width:900px){.page-hero{min-height:240px}.page-hero::before{opacity:.3;width:100%}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}.offer{flex-direction:column}}
@@ -297,3 +347,6 @@ body.is-leaving .page-progress{animation:progress 1.4s ease-out forwards}
   .band-full{border-top-left-radius:80px 24px}
 }
 @media (max-width:520px){.register-cols{grid-template-columns:1fr}.register-cols>div:first-child{border-right:0;border-bottom:1px solid var(--line);padding:0 0 .8rem;margin-bottom:.8rem}.register-cols>div:last-child{padding-left:0}.login-card,.login-aside-inner{padding:1.6rem}}
+
+@media (max-width:1000px){.tabs--cards{grid-template-columns:1fr 1fr}.course-grid,.link-list{grid-template-columns:1fr}}
+@media (max-width:900px){.tabs--cards{grid-template-columns:1fr}.grid-3.inst-grid{grid-template-columns:1fr}}
